@@ -1,22 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Мой первый сайт</title>
-    <style>
-      body {
-        margin: 0;
-        background-color: #222;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-size: 3em;
-        font-family: sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    Привет, тюбики! А даня лох
-  </body>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>medd</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #text {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #333;
+      display: none; /* Скрыт по умолчанию */
+    }
+  </style>
+</head>
+<body>
+  <button onclick="showText()">нажми на кнопку</button>
+  <div id="text">даня лох 🎉</div>
+
+  <script>
+    function showText() {
+      document.getElementById("text").style.display = "block";
+    }
+  </script>
+</body>
 </html>
