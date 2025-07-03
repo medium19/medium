@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>шутка</title>
+    <title>Одностраничный сайт</title>
     <style>
         body {
             display: flex;
@@ -29,20 +29,33 @@
             border: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            margin-bottom: 20px;
         }
         
         .button:hover {
             background-color: #45a049;
         }
+        
+        .input-field {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 250px;
+            display: none; /* Сначала поле скрыто */
+        }
     </style>
 </head>
 <body>
-    <div class="text">Здарова</div>
-    <button class="button" onclick="showMessage()">Нажми меня</button>
+    <div class="text">Привет, мир!</div>
+    <button class="button" onclick="showInputField()">Показать поле</button>
+    <input type="text" class="input-field" id="myInput" placeholder="Введите текст...">
 
     <script>
-        function showMessage() {
-            alert("Чизазез!");
+        function showInputField() {
+            const inputField = document.getElementById('myInput');
+            inputField.style.display = 'block'; // Показываем поле
+            inputField.focus(); // Фокусируемся на поле
         }
     </script>
 </body>
